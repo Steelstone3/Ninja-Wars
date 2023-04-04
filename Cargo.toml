@@ -1,0 +1,26 @@
+[package]
+name = "ninja_wars"
+version = "0.1.0"
+authors = ["Skippy <steelstone3@gmail.com>"]
+edition = "2021"
+homepage = "https://github.com/Steelstone3/Bubbles-Dive-Planner-Console"
+repository = "https://github.com/Steelstone3/Bubbles-Dive-Planner-Console"
+license = "GPLv3"
+readme = "README.md"
+include = [
+
+]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[profile.release]
+opt-level = 'z'
+lto = true
+codegen-units = 1
+
+[dev-dependencies]
+
+[dependencies]
+inquire = "0.*"
+rand_derive2 ="0.*"
+rand="0.*"
