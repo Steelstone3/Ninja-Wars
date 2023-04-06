@@ -70,7 +70,7 @@ mod player_should {
         let is_in_play = player.is_in_play();
 
         // Then
-        assert_eq!(true, is_in_play)
+        assert!(is_in_play)
     }
 
     #[test]
@@ -91,6 +91,6 @@ mod player_should {
         let is_in_play = player.is_in_play();
 
         // Then
-        assert_eq!(false, is_in_play)
+        assert!(!is_in_play)
     }
 }

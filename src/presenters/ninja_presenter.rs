@@ -16,7 +16,7 @@ impl NinjaPresenter {
         if ninja.health == 0 {
             println!("Ninja {} is dead!", ninja.name)
         } else {
-            println!("{}", ninja.to_string());
+            println!("{}", ninja);
         }
     }
 
@@ -26,6 +26,6 @@ impl NinjaPresenter {
 
         Select::new(message, alive_ninjas)
             .prompt()
-            .expect(format!("Player {} Wins!", winning_player_name.to_string()).as_str())
+            .unwrap_or_else(|_| panic!("Player {} Wins!", winning_player_name))
     }
 }

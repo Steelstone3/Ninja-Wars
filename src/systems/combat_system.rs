@@ -14,7 +14,7 @@ impl CombatSystem {
     }
 
     pub fn player_turn(attacking_player: &mut Player, defending_player: &mut Player) {
-        PlayerPresenter::display_player_turn(&attacking_player);
+        PlayerPresenter::display_player_turn(attacking_player);
 
         let attacking_ninja = NinjaPresenter::select_attacking_ninja(attacking_player.ninjas, defending_player.name);
         let mut defending_ninja = NinjaPresenter::select_defending_ninja(defending_player.ninjas, attacking_player.name);

@@ -25,7 +25,7 @@ impl Default for Ninja {
 impl Ninja {
     pub fn take_damage(&mut self, attack: Attack) {
         if attack.damage < self.health {
-            self.health = self.health - attack.damage;
+            self.health -= attack.damage;
         } else {
             self.health = 0;
         }
@@ -95,7 +95,7 @@ mod ninja_should {
         let is_alive = ninja.is_alive();
 
         // Then
-        assert_eq!(true, is_alive)
+        assert!(is_alive)
     }
 
     #[test]
@@ -112,6 +112,6 @@ mod ninja_should {
         let is_alive = ninja.is_alive();
 
         // Then
-        assert_eq!(false, is_alive)
+        assert!(!is_alive)
     }
 }
